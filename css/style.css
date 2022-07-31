@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.253), rgba(0, 0, 0, 0.273)), url("/img/header-image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    background-attachment: fixed;
+}
+
+#resume ul li {
+    list-style-image: url("/img/list-style.png");
+}
+
+.paragraph {
+    text-align: justify !important;
+}
+
+.outer {
+    width: 160px;
+    height: 160px;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner {
+    width: 120px;
+    height: 120px;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.12),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+.circle1 {
+    fill: none;
+    stroke: url(#grad1);
+    stroke-width: 20px;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: anime1 2s linear forwards
+}
+
+.circle2 {
+    fill: none;
+    stroke: url(#grad1);
+    stroke-width: 20px;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: anime2 2s linear forwards
+}
+.circle3 {
+    fill: none;
+    stroke: url(#grad1);
+    stroke-width: 20px;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: anime3 2s linear forwards
+}
+.circle4 {
+    fill: none;
+    stroke: url(#grad1);
+    stroke-width: 20px;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: anime4 2s linear forwards;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes anime1 {
+    100% {
+        stroke-dashoffset: 44;
+    }
+}
+
+@keyframes anime2 {
+    100% {
+        stroke-dashoffset: 64;
+    }
+}
+
+@keyframes anime3 {
+    100% {
+        stroke-dashoffset: 84;
+    }
+}
+
+@keyframes anime4 {
+    100% {
+        stroke-dashoffset: 104;
+    }
+}
+
+.nnn {
+    min-height: 75vh !important;
+}
+
+#feedback {
+    background-image: url("/img/feedback-image-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.line {
+	-webkit-text-stroke: 1px #fff;
+    color: transparent !important;
+}
