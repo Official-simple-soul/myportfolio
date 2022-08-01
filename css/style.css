@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
+    /* border: 1px solid red; */
 }
 
 header {
@@ -122,3 +123,36 @@ svg {
 	-webkit-text-stroke: 1px #fff;
     color: transparent !important;
 }
+
+#success-story {
+    background-image: url("/img/EMOJIS.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.box {
+    left: 5%;
+    top: 0;
+    width: 30%;
+    height: 450px;
+}
+
+.box-small {
+    left: 21%;
+    bottom: 2%;
+    width: 19%;
+    height: 100px;
+}
+
+.colour {
+    background-color: rgb(228, 226, 226);
+}
+
+footer {
+    background-image: url("/img/footer-image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
