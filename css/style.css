@@ -18,6 +18,10 @@ header {
     background-attachment: fixed;
 }
 
+.fa-solid, .fa-brands {
+    cursor: pointer;
+}
+
 #resume ul li {
     list-style-image: url("/img/list-style.png");
 }
@@ -156,3 +160,144 @@ footer {
     background-repeat: no-repeat;
 }
 
+.scrolling {
+    position: relative;
+    overflow: hidden;
+    transition: all 1.5s ease-in-out;
+}
+
+.scrolling::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.355), rgba(255, 255, 255, 0.355));
+    z-index: 1;
+    animation: animebtn 3s ease infinite;
+}
+
+@keyframes animebtn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.navhov{
+    position: relative;
+}
+
+.navhov::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 8%;
+    background: white;
+    z-index: 1;
+    transition: 1s all ease;
+    border-radius: 10px;
+}
+
+.navhov::after{
+    content: "";
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+    width: 0;
+    height: 7%;
+    background: white;
+    z-index: 1;
+    transition: 1s all ease;
+    border-radius: 10px;
+}
+
+.navhov:hover::before {
+    width: 100%;
+}
+
+.navhov:hover::after {
+    width: 50%;
+}
+
+.about-hover{
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+.about-hover:hover {
+    background-color: rgb(15, 15, 15) !important;
+    color: white !important;
+}
+
+.work-hover{
+    position: relative;
+    cursor: pointer;
+}
+
+.work-hover::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2) 50%, transparent);
+    z-index: 1;
+    transition: 1s all ease;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.357);
+}
+
+.work-hover::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background-image: linear-gradient(to bottom right, transparent, rgba(253, 253, 253, 0.2) 50%);
+    z-index: 1;
+    transition: 1s all ease;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.357);
+}
+
+.work-hover:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.work-hover:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.work-title {
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    z-index: 20;
+}
+.work-hover:hover .work-title {
+    opacity: 1 !important;
+    z-index: 20;
+}
+
+.client-hover{
+    transition: all 0.5s ease-in-out;
+}
+.client-hover:hover {
+    cursor: pointer;
+    background-color: rgba(228, 226, 226, 0.1) !important;
+    /* color: black !important; */
+}
+
+@media (max-width: 450px) {
+    .header-content {
+        width: 100% !important;
+    } 
+}

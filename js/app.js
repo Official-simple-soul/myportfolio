@@ -1,37 +1,37 @@
 const aboutText = [
     {
-        image: 'img/dev-1.png',
+        image: '<i class="fa-solid fa-laptop fs-1"></i>',
         title: 'Web Development',
         text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
     },
 
     {
-        image: 'img/dev-2.png',
+        image: '<i class="fa-solid fa-laptop-code fs-1"></i>',
+        title: 'Web Design',
+        text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
+    },
+
+    {
+        image: '<i class="fa-solid fa-laptop fs-1"></i>',
+        title: 'Web Flow',
+        text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
+    },
+
+    {
+        image: '<i class="fa-solid fa-laptop-code fs-1"></i>',
         title: 'Web Development',
         text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
     },
 
     {
-        image: 'img/dev-1.png',
-        title: 'Web Development',
+        image: '<i class="fa-solid fa-laptop fs-1"></i>',
+        title: 'Web Design',
         text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
     },
 
     {
-        image: 'img/dev-1.png',
-        title: 'Web Development',
-        text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
-    },
-
-    {
-        image: 'img/dev-2.png',
-        title: 'Web Development',
-        text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
-    },
-
-    {
-        image: 'img/dev-1.png',
-        title: 'Web Development',
+        image: '<i class="fa-solid fa-laptop-code fs-1"></i>',
+        title: 'Web Flow',
         text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
     }
 ]
@@ -155,8 +155,8 @@ let count4 = 0;
 for (let i = 0; i < aboutText.length; i++) {
     let aboutItem = ''
     aboutItem += `  <div class="col-md-4">
-                        <div class="card pt-3 my-3 bg-transparent border-0 shadow">
-                            <img src="${aboutText[i].image}" alt="" class="w-25 mx-auto">
+                        <div class="card pt-3 my-3 bg-transparent border-0 shadow about-hover">
+                            ${aboutText[i].image}
                             <div class="card-body">
                                 <h6 class="fw-bold">${aboutText[i].title}</h6>
                                 <p class="" style="font-size: 13px;">${aboutText[i].text}</p>
@@ -260,9 +260,9 @@ function getWork() {
     let works =  worksDetails.map(item => {
         return `
                 <div class="col-lg-4">
-                    <div class=" card mb-4 bg-transparent border-0" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class=" card mb-4 bg-transparent border-0 work-hover" data-aos="zoom-in" data-aos-duration="1000">
                         <img src="${item.image}" alt="" class="img-fluid">
-                        <button class="btn btn-transparent btn-outline-light position-absolute me-3 mb-3 end-0 bottom-0">${item.title}</button>
+                        <button class="btn btn-transparent btn-outline-light position-absolute me-3 mb-3 end-0 bottom-0 work-title">${item.title}</button>
                     </div>
                 </div>`
     }).join('')
@@ -274,7 +274,7 @@ getWork();
 for (let i = 0; i < successStory.length; i++) {
     let successStoryItem = ''
     successStoryItem += `   <div class="col-md-3">
-                                <div class="card border-0 border-5 border-secondary border-top border-start shadow bg-transparent text-center py-3">
+                                <div class="card about-hover mb-2 border-0 border-5 border-secondary border-top border-start shadow bg-transparent text-center py-3">
                                     <div class="d-flex justify-content-center align-items-center">
                                         ${successStory[i].image}
                                         <h2 class="mx-4 fw-bold mb-0">${successStory[i].title}</h2>
