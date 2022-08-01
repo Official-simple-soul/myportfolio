@@ -86,27 +86,27 @@ const experienceText = [
 
 const worksDetails = [
     {
-        image: '/img/works2.png',
+        image: '../img/works2.png',
         title: 'E-Commerce',
     },
 
     {
-        image: '/img/works3.png',
+        image: '../img/works3.png',
         title: 'Car Dealing',
     },
 
     {
-        image: '/img/works5.png',
+        image: '../img/works5.png',
         title: 'Fintech',
     },
 
     {
-        image: '/img/works4.png',
+        image: '../img/works4.png',
         title: 'E-Commerce',
     },
 
     {
-        image: '/img/works1.png',
+        image: '../img/works1.png',
         title: 'Fintech',
     }
 ]
