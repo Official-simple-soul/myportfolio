@@ -307,4 +307,8 @@ footer {
     .center {
         text-align: center;
     }
+
+    .small {
+        justify-content: center !important;
+    }
 }
