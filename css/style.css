@@ -54,7 +54,7 @@ header {
     stroke-width: 20px;
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
-    animation: anime1 2s linear forwards
+    animation: anime1 2s linear forwards;
 }
 
 .circle2 {
@@ -63,7 +63,7 @@ header {
     stroke-width: 20px;
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
-    animation: anime2 2s linear forwards
+    animation: anime2 2s linear forwards;
 }
 .circle3 {
     fill: none;
@@ -71,7 +71,7 @@ header {
     stroke-width: 20px;
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
-    animation: anime3 2s linear forwards
+    animation: anime3 2s linear forwards;
 }
 .circle4 {
     fill: none;
@@ -136,15 +136,15 @@ svg {
 }
 
 .box {
-    left: 5%;
-    top: 0;
+    left: 6%;
+    top: 1%;
     width: 30%;
-    height: 450px;
+    height: 400px;
 }
 
 .box-small {
     left: 21%;
-    bottom: 2%;
+    bottom: 16%;
     width: 19%;
     height: 100px;
 }
@@ -300,6 +300,20 @@ footer {
         width: 100% !important;
     }
 
+    .hide {
+        display: none !important;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .small {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 800px) {
     .hide {
         display: none !important;
     }

@@ -1,7 +1,7 @@
 const aboutText = [
     {
-        image: '<i class="fa-solid fa-laptop fs-1"></i>',
-        title: 'Web Development',
+        image: '<i class="fa-solid fa-laptop-code fs-1"></i>',
+        title: 'Web Dev',
         text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
     },
 
@@ -19,7 +19,7 @@ const aboutText = [
 
     {
         image: '<i class="fa-solid fa-laptop-code fs-1"></i>',
-        title: 'Web Development',
+        title: 'Web Dev',
         text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
     },
 
@@ -38,35 +38,35 @@ const aboutText = [
 
 const educationText = [
     {
-        image: '/img/list-style.png',
-        title: 'Web Development',
+        image: 'img/list-style.png',
+        title: 'Front-End Developement',
         text: 'Sed odio cursus felis dolor pellentesque. dolordolor pe Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.pellentesque.',
-        date: '2018 - 2019',
-        institution: 'University'
+        date: '2022 - 2022',
+        institution: 'KodeCamp Bootcamp'
     },
     {
-        image: '/img/list-style.png',
-        title: 'Web Development',
+        image: 'img/list-style.png',
+        title: 'Front-End Development',
         text: 'Sed odio cursus felis dolor pellentesque. dolordolor pe Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.pellentesque.',
-        date: '2018 - 2019',
-        institution: 'University'
+        date: '2020 - 2021',
+        institution: 'SimpliLearn Online Institute'
     },
     {
-        image: '/img/list-style.png',
-        title: 'Web Development',
+        image: 'img/list-style.png',
+        title: 'Estate Management',
         text: 'Sed odio cursus felis dolor pellentesque. dolordolor pe Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.pellentesque.',
-        date: '2018 - 2019',
-        institution: 'University'
+        date: '2013 - 2019',
+        institution: 'Federal University of Technology, Minna'
     }
 ]
 
 const experienceText = [
     {
         image: '/img/list-style.png',
-        title: 'Web Development',
+        title: 'KodeCamp Blog website',
         text: 'Sed odio cursus felis dolor pellentesque. dolordolor pe Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.pellentesque.',
-        date: '2018 - 2019',
-        institution: 'University'
+        date: '2022 - 2022',
+        institution: 'KodeCamp Bootcamp'
     },
     {
         image: '/img/list-style.png',
@@ -180,7 +180,7 @@ for (let i = 0; i < educationText.length; i++) {
                                 <div class="col-md-9">
                                     <div class="card border-0 bg-transparent">
                                         <p class="fw-bold mb-1">${educationText[i].title}</p>
-                                        <p class="paragraph text-muted">${educationText[i].text}</p>
+                                        <p class="text-muted">${educationText[i].text}</p>
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +203,7 @@ function getExperience() {
                         <div class="col-md-9">
                             <div class="card border-0 bg-transparent">
                                 <p class="fw-bold mb-1">${item.title}</p>
-                                <p class="paragraph text-muted">${item.text}</p>
+                                <p class="text-muted">${item.text}</p>
                             </div>
                         </div>
                     </div>
@@ -273,7 +273,7 @@ getWork();
 // success story
 for (let i = 0; i < successStory.length; i++) {
     let successStoryItem = ''
-    successStoryItem += `   <div class="col-md-3">
+    successStoryItem += `   <div class="col-lg-3 col-md-6">
                                 <div class="card about-hover mb-2 border-0 border-5 border-secondary border-top border-start shadow bg-transparent text-center py-3">
                                     <div class="d-flex justify-content-center align-items-center">
                                         ${successStory[i].image}
