@@ -295,6 +295,25 @@ footer {
     background-color: rgba(228, 226, 226, 0.1) !important;
 }
 
+.change-text {
+    transition: all 1s ease-in-out;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+    /* transform: translateY(100px); */
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @media (max-width: 450px) {
     .header-content {
         width: 100% !important;
@@ -314,6 +333,11 @@ footer {
 }
 
 @media (max-width: 800px) {
+    .header-content {
+        width: 80% !important;
+        margin: auto !important;
+    }
+
     .hide {
         display: none !important;
     }

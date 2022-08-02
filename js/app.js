@@ -285,7 +285,35 @@ for (let i = 0; i < successStory.length; i++) {
     successStoryRow.innerHTML += successStoryItem;
 }
 
+let changeText = document.querySelector('.change-text');
+let changeCount = 0;
 
+setInterval(() => {
+
+    changeCount++
+
+    if (changeCount == 100) {
+        changeText.textContent = 'SIMPLE_SOUL IS A WEB DEVELOP';
+        changeText.classList.toggle('fade-in');
+    }
+
+    if (changeCount == 200) {
+        changeText.textContent = 'I BRING YOUR DESIGN TO LIVE';
+        changeText.classList.toggle('fade-in');
+    }
+
+    if (changeCount == 300) {
+        changeText.textContent = 'HE IS THE PERFECT DEVELOPER TO CONTACT';
+        changeText.classList.toggle('fade-in');
+    }
+
+    else if (changeCount == 400) {
+        changeCount -= 400;
+        changeText.textContent = 'SIMPLE_SOUL NEED A CONTENTS WRITER';
+        changeText.classList.toggle('fade-in');
+    }
+
+} , 40);
 
 
 
