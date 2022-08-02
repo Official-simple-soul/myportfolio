@@ -293,7 +293,6 @@ footer {
 .client-hover:hover {
     cursor: pointer;
     background-color: rgba(228, 226, 226, 0.1) !important;
-    /* color: black !important; */
 }
 
 @media (max-width: 450px) {
