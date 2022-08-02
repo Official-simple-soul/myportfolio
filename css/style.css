@@ -299,5 +299,13 @@ footer {
 @media (max-width: 450px) {
     .header-content {
         width: 100% !important;
-    } 
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .center {
+        text-align: center;
+    }
 }
