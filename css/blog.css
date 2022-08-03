@@ -16,3 +16,15 @@ img {
 img:hover {
     transform: scale(1.1);
 }
+
+@media screen and (max-width: 450px) {
+    .remove {
+        margin-right: 2px !important;
+        margin-left: 2px !important;
+    }
+
+    .add {
+        margin: 5px 0 !important;
+    }
+}
+    

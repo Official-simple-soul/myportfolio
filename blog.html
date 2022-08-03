@@ -74,15 +74,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="card bg-transparent border-0">
-                        <div class="d-flex justify-content-start align-items-center text-light">
+                    <div class="card bg-transparent border-0 my-2">
+                        <a href="index.html" class="text-decoration-none"><div class="d-flex justify-content-start align-items-center text-light">
                             <i class="fa-solid fa-arrow-left-long"></i>
                             <p class="ms-2 mb-0">Back</p>
-                        </div>
+                        </div></a>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card bg-transparent border-0">
+                    <div class="card bg-transparent border-0 my-2">
                         <form action="get"  class="d-flex justify-content-start align-items-center p-1 border border-light rounded">
                             <button type="submit" class="border-0 bg-transparent text-muted"><i class="fa-solid fa-magnifying-glass"></i></button>
                             <input type="text" class="border-0 bg-transparent ms-2 w-100 blog-none" placeholder="search">
@@ -90,13 +90,12 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card bg-transparent border-0">
+                    <div class="card bg-transparent border-0 my-2">
                         <div class="d-flex justify-content-between align-items-center text-light">
-                            <button class="btn btn-transparent btn-outline-light active mx-2 py-1">All</button>
-                            <button class="btn btn-transparent btn-outline-light mx-2 py-1">Recent</button>
-                            <button class="btn btn-transparent btn-outline-light mx-2 py-1">Featured</button>
-                            <button class="btn btn-transparent btn-outline-light mx-2 py-1">Popular</button>
-
+                            <button class="btn btn-transparent btn-outline-light active ms-2 py-1 remove">All</button>
+                            <button class="btn btn-transparent btn-outline-light mx-2 py-1 remove">Recent</button>
+                            <button class="btn btn-transparent btn-outline-light mx-2 py-1 remove">Featured</button>
+                            <button class="btn btn-transparent btn-outline-light me-2 py-1 remove">Popular</button>
                         </div>
                     </div>
                 </div>
@@ -111,13 +110,13 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="card bg-transparent border-0">
-                        <h5 class="mb-4">Recent</h5>
+                        <h5 class="mb-4 text-light">Recent</h5>
                         <div class="body blog-recent-row px-1"></div>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="card bg-transparent border-0">
-                        <h5 class="mb-4">Featured</h5>
+                        <h5 class="mb-4 text-light">Featured</h5>
                         <div class="row blog-featured-row">
                         </div>
                     </div>
@@ -128,9 +127,9 @@
     <!-- end of blog body -->
 
     <!-- blog popular -->
-    <section id="popular" class="bg-dark py-5">
+    <section id="popular" class="bg-dark py-4">
         <div class="container">
-            <h5 class="mb-4">Popular</h5>
+            <h5 class="mb-4 text-light">Popular</h5>
             <div class="row row-popular">
             </div>
         </div>
@@ -138,8 +137,9 @@
     <!-- end of blog popular -->
 
     <!-- related headlines one-->
-    <section id="headlines-one" class="py-5">
+    <section id="headlines-one" class="py-4">
         <div class="container">
+            <h5 class="mb-4 px-3">Related Headlines</h5>
             <div class="row row-headline-one">
             </div>
         </div>
@@ -147,7 +147,7 @@
     <!-- end of related headlines one -->
 
     <!-- related headlines two -->
-    <section id="headlines-two" class="py-5">
+    <section id="headlines-two" class="py-4">
         <div class="container">
             <div class="row row-headline-two">
             </div>

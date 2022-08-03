@@ -134,17 +134,17 @@ getBlogRecent();
 for (let i = 0; i < blogFeatured.length; i++) {
     let items = blogFeatured[i];
     let blogFeaturedItem = `
-                            <div class="col-lg-6 mb-4">
+                            <div class="col-lg-6 col-md-6 col-12 mb-5">
                                 <div class="card bg-transparent border-0">
                                     <img src="${items.image}" alt="" class="image-fluid">
                                 </div>
                             </div>
-                            <div class="col-lg-6 mb-4">
+                            <div class="col-lg-6 col-md-6 col-12 mb-5">
                                 <div class="card bg-transparent border-0">
-                                    <p class="text-muted" style="font-size: 15px;">03 - 08 - 2022</p>
-                                    <p class="text-light">${items.title}</p>
+                                    <p class="text-muted mb-1" style="font-size: 15px;">03 - 08 - 2022</p>
+                                    <p class="text-light" style="font-size: 13px;">${items.title}</p>
                                 </div>
-                                <button class="btn btn-transparent btn-outline-light">${items.button}</button>
+                                <button class="btn btn-transparent btn-outline-light" style="font-size: 13px;">${items.button}</button>
                             </div>`
     blogFeaturedRow.innerHTML += blogFeaturedItem;
 }
@@ -154,14 +154,14 @@ for (let i = 0; i < blogFeatured.length; i++) {
 function getBlogPopular() {
     let blogRecentItem =  blogPopular.map(item => {
         return `
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-12">
                     <div class="card bg-transparent border-0">
                         <div class="card border-0 bg-transparent">
                             <img src="${item.image}" alt="">
                         </div>
                         <div class="card-body ps-0">
                             <p class="text-muted" style="font-size: 14px;">${item.date}</p>
-                            <h5 class="card-title text-light mb-3">${item.title}</h5>
+                            <h6 class="card-title text-light mb-3">${item.title}</h6>
                             <a href="#" class="btn btn-outline-light">${item.button}</a>
                         </div>
                     </div>
@@ -176,15 +176,15 @@ getBlogPopular();
 for (let i = 0; i < blogHeadlineOne.length; i++) {
     let items = blogHeadlineOne[i];
     let blogHeadlineOneItem = `
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <div class="card bg-transparent border-0 px-3">
                                     <div class="card bg-transparent border-0">
                                         <img src="${items.image}" alt="">
                                     </div>
                                     <div class="card-body ps-0">
                                         <p class="text-muted" style="font-size: 14px;">${items.date}</p>
-                                        <h5 class="card-title mb-3">${items.title}</h5>
-                                        <a href="#" class="btn btn-dark ads">${items.button}</a>
+                                        <h6 class="card-title mb-3">${items.title}</h6>
+                                        <a href="#" class="btn btn-dark ads mb-3">${items.button}</a>
                                     </div>
                                 </div>
                             </div>`
@@ -196,13 +196,13 @@ for (let i = 0; i < blogHeadlineOne.length; i++) {
 for (let i = 0; i < blogHeadlineTwo.length; i++) {
     let items = blogHeadlineTwo[i];
     let blogHeadlineTwoItem = `
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-6 col-12">
                                 <div class="card bg-transparent border-0">
                                     <div class="card bg-transparent border-0">
                                         <img src="${items.image}" alt="">
                                     </div>
                                     <div class="card-body ps-0">
-                                        <h5 class="card-title text-muted" style="font-size: 14px;">${items.text} <span class="fw-bold text-dark"><u>${items.button}</u></span></h5>
+                                        <h5 class="card-title text-muted" style="font-size: 13px;">${items.text} <span class="fw-bold text-dark"><u>${items.button}</u></span></h5>
                                     </div>
                                 </div>
                             </div>`
