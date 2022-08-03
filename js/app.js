@@ -96,18 +96,23 @@ const worksDetails = [
     },
 
     {
-        image: 'img/works5.png',
-        title: 'Fintech',
-    },
-
-    {
         image: 'img/works4.png',
         title: 'E-Commerce',
     },
 
     {
+        image: 'img/works5.png',
+        title: 'Fintech',
+    },
+
+    {
         image: 'img/works1.png',
         title: 'Fintech',
+    },
+
+    {
+        image: 'img/works2.png',
+        title: 'E-Commerce',
     }
 ]
 
@@ -144,11 +149,15 @@ let numberThree = document.querySelector('.number-three');
 let numberFour = document.querySelector('.number-four');
 let workRow = document.querySelector('.work-row');
 let successStoryRow = document.querySelector('.success-story-row');
+let changeText = document.querySelector('.change-text');
+let mode = document.querySelectorAll('.mode');
+let switchMode = document.querySelector('.switch');
 
 let count1 = 0;
 let count2 = 0;
 let count3 = 0;
 let count4 = 0;
+let changeCount = 0;
 
 
 // About Section
@@ -261,7 +270,7 @@ function getWork() {
         return `
                 <div class="col-lg-4">
                     <div class=" card mb-4 bg-transparent border-0 work-hover" data-aos="zoom-in" data-aos-duration="1000">
-                        <img src="${item.image}" alt="" class="img-fluid">
+                        <img src="${item.image}" alt="" class="img-fluid imagee">
                         <button class="btn btn-transparent btn-outline-light position-absolute me-3 mb-3 end-0 bottom-0 work-title">${item.title}</button>
                     </div>
                 </div>`
@@ -285,35 +294,62 @@ for (let i = 0; i < successStory.length; i++) {
     successStoryRow.innerHTML += successStoryItem;
 }
 
-let changeText = document.querySelector('.change-text');
-let changeCount = 0;
-
 setInterval(() => {
 
     changeCount++
 
     if (changeCount == 100) {
-        changeText.textContent = 'SIMPLE_SOUL IS A WEB DEVELOP';
-        changeText.classList.toggle('fade-in');
+        changeText.textContent = 'SIMPLE_SOUL IS A WEB DEVELOPER';
+        changeText.classList.add('fade-in');
+    }
+
+    if (changeCount == 150) {
+        changeText.classList.remove('fade-in');
     }
 
     if (changeCount == 200) {
-        changeText.textContent = 'I BRING YOUR DESIGN TO LIVE';
-        changeText.classList.toggle('fade-in');
+        changeText.textContent = 'I BRING YOUR DESIGN TO LIFE';
+        changeText.classList.add('fade-in');
+    }
+
+    if (changeCount == 250) {
+        changeText.classList.remove('fade-in');
     }
 
     if (changeCount == 300) {
         changeText.textContent = 'HE IS THE PERFECT DEVELOPER TO CONTACT';
-        changeText.classList.toggle('fade-in');
+        changeText.classList.add('fade-in');
+    }
+
+    if (changeCount == 350) {
+        changeText.classList.remove('fade-in');
     }
 
     else if (changeCount == 400) {
         changeCount -= 400;
         changeText.textContent = 'SIMPLE_SOUL NEED A CONTENTS WRITER';
-        changeText.classList.toggle('fade-in');
+        changeText.classList.add('fade-in');
     }
 
-} , 40);
+    if (changeCount == 50) {
+        changeText.classList.remove('fade-in');
+    }
+
+} , 30);
+
+// dark mode
+// console.log(switchMode)
+switchMode.addEventListener('click', () => {
+
+    for (let i = 0; i < mode.length; i++) {
+        mode[i].classList.toggle('bg-dark');
+        mode[i].classList.toggle('text-light');
+
+        if (mode[i].classList.contains('bg-white')) {
+            mode[i].classList.remove('bg-white');
+        }
+    }
+})
 
 
 

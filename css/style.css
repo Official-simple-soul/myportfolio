@@ -128,6 +128,15 @@ svg {
     color: transparent !important;
 }
 
+input:focus {
+    box-shadow: none !important;
+    border-color: white !important;
+}
+
+input:checked {
+    background-color: black !important;
+}
+
 #success-story {
     background-image: url("../img/EMOJIS.png");
     background-size: cover;
@@ -285,6 +294,10 @@ footer {
 .work-hover:hover .work-title {
     opacity: 1 !important;
     z-index: 20;
+}
+
+.imagee {
+    max-height: 200px;
 }
 
 .client-hover{
