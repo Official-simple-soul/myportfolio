@@ -140,6 +140,7 @@ const successStory = [
 ]
 
 
+
 let rowWrap = document.querySelector('.row-wrap');
 let rowEdu = document.querySelector('.row-edu');
 let rowExp = document.querySelector('.row-exp');
@@ -152,6 +153,8 @@ let successStoryRow = document.querySelector('.success-story-row');
 let changeText = document.querySelector('.change-text');
 let mode = document.querySelectorAll('.mode');
 let switchMode = document.querySelector('.switch');
+let ads = document.querySelector('.ads');
+
 
 let count1 = 0;
 let count2 = 0;
@@ -338,12 +341,13 @@ setInterval(() => {
 } , 30);
 
 // dark mode
-// console.log(switchMode)
 switchMode.addEventListener('click', () => {
 
     for (let i = 0; i < mode.length; i++) {
         mode[i].classList.toggle('bg-dark');
         mode[i].classList.toggle('text-light');
+        ads.classList.toggle('btn-outline-light');
+        ads.classList.toggle('ads2')
 
         if (mode[i].classList.contains('bg-white')) {
             mode[i].classList.remove('bg-white');

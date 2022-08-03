@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/b353e23091.js" crossorigin="anonymous"></script>
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- bootstrap style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/blog.css">
+
+    <title>My portfolio</title>
+</head>
+<body>
+
+    <!-- header -->
+    <header class="bg-dark">
+        <!-- navbar -->
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt="" class="rounded-circle" style="width: 60px; height: 61px"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-circle-chevron-down fs-1 text-light"></i>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link text-light mx-3 active navhov" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-light mx-3 navhov" href="#about">ABOUT</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-light mx-3 navhov" href="#works">SERVICE</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-light mx-3 navhov" href="#works">WORKS</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-light mx-3 navhov" href="blog.html">BLOG</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-light mx-3 navhov" href="#resume">RESUME</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-light mx-3 navhov" href="#contact">CONTACT</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex form-switch">
+                      <button class="btn btn-outline-light btn-transparent" type="submit">HIRE ME</button>
+                    </form>
+                  </div>
+                  <!-- <form action="" class="form-switch ms-3">
+                    <input class="form-check-input p-1 switch" type="checkbox" id="flexSwitchCheckChecked" checked>
+                </form> -->
+                </div>
+            </nav>
+        </div>
+        <!-- end of navbar -->
+    </header>
+    <!-- end of header -->
+
+    <!-- blog head -->
+    <section id="blog-head" class="py-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card bg-transparent border-0">
+                        <div class="d-flex justify-content-start align-items-center text-light">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                            <p class="ms-2 mb-0">Back</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card bg-transparent border-0">
+                        <form action="get"  class="d-flex justify-content-start align-items-center p-1 border border-light rounded">
+                            <button type="submit" class="border-0 bg-transparent text-muted"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <input type="text" class="border-0 bg-transparent ms-2 w-100 blog-none" placeholder="search">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card bg-transparent border-0">
+                        <div class="d-flex justify-content-between align-items-center text-light">
+                            <button class="btn btn-transparent btn-outline-light active mx-2 py-1">All</button>
+                            <button class="btn btn-transparent btn-outline-light mx-2 py-1">Recent</button>
+                            <button class="btn btn-transparent btn-outline-light mx-2 py-1">Featured</button>
+                            <button class="btn btn-transparent btn-outline-light mx-2 py-1">Popular</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of blog head -->
+
+    <!-- blog body-->
+    <section id="blog-body" class="bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="card bg-transparent border-0">
+                        <h5 class="mb-4">Recent</h5>
+                        <div class="body blog-recent-row px-1"></div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card bg-transparent border-0">
+                        <h5 class="mb-4">Featured</h5>
+                        <div class="row blog-featured-row">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of blog body -->
+
+    <!-- blog popular -->
+    <section id="popular" class="bg-dark py-5">
+        <div class="container">
+            <h5 class="mb-4">Popular</h5>
+            <div class="row row-popular">
+            </div>
+        </div>
+    </section>
+    <!-- end of blog popular -->
+
+    <!-- related headlines one-->
+    <section id="headlines-one" class="py-5">
+        <div class="container">
+            <div class="row row-headline-one">
+            </div>
+        </div>
+    </section>
+    <!-- end of related headlines one -->
+
+    <!-- related headlines two -->
+    <section id="headlines-two" class="py-5">
+        <div class="container">
+            <div class="row row-headline-two">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- footer section -->
+    <footer class="pt-5 bg-dark">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-md-6">
+                    <div class="card bg-transparent border-0">
+                        <h3 class="text-light">SUBSCRIBE TO MY NEWSLETTER</h3>
+                        <P class="pt-3 paragraph" style="color: #BFBFBF;">
+                            Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit. Tempor sollicitudin 
+                            turpis mi ac pretium elit viverra tortor. 
+                            Pulvinar ornare dictum est tellus tincidunt 
+                            tellus. Aliquam pellentesque elementum a in. 
+                            Malesuada risus in pharetra, a. </P>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-transparent border-0 text-center">
+                        <form action="" class="mx-auto w-75">
+                            <input type="text" for="email" placeholder="E.g simple_soul@gmail.com" class="w-100 py-2 px-2 border border-light bg-transparent"><br>
+                            <button type="submit" class="btn btn-transparent btn-outline-light mt-4 scrolling">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- custom javascript -->
+    <script src="js/blog.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

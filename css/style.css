@@ -297,7 +297,7 @@ footer {
 }
 
 .imagee {
-    max-height: 200px;
+    max-height: 250px;
 }
 
 .client-hover{
@@ -324,6 +324,63 @@ footer {
     }
     100% {
         opacity: 1;
+    }
+}
+
+.ads:hover {
+    background: white !important;
+    color: black !important;
+    border: none !important;
+}
+
+.ads2:hover {
+    background: white !important;
+    color: black !important;
+    border: none !important;
+}
+
+.ads {
+    animation: ads 1.5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+.ads2 {
+    animation: ads2 1.5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+#blog-head input:focus {
+    outline: none !important;
+    color: rgba(245, 245, 245, 0.822) !important;
+}
+
+@keyframes ads {
+    0% {
+        transform: translateY(0);
+        box-shadow: 1px 1px 10px 10px rgba(36, 34, 34, 0.1);
+    }
+    50% {
+        transform: translateY(10px);
+        box-shadow: 1px 1px 10px 10px rgba(36, 34, 34, 0.755);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 1px 1px 10px 10px rgba(36, 34, 34, 0.1);
+    }
+}
+
+@keyframes ads2 {
+    0% {
+        transform: translateY(0);
+        box-shadow: 1px 1px 10px 10px rgba(219, 206, 206, 0.1);
+    }
+    50% {
+        transform: translateY(10px);
+        box-shadow: 1px 1px 10px 10px rgba(224, 211, 211, 0.755);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 1px 1px 10px 10px rgba(224, 210, 210, 0.1);
     }
 }
 
