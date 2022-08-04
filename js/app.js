@@ -86,33 +86,39 @@ const experienceText = [
 
 const worksDetails = [
     {
-        image: 'img/works2.png',
-        title: 'E-Commerce',
+        image: 'img/kodeblog.png',
+        title: 'KodeCamp Blog website',
+        link: 'https://official-simple-soul.github.io/TeamKodecampBlog/'
     },
 
     {
-        image: 'img/works3.png',
-        title: 'Car Dealing',
+        image: 'img/portfolio.png',
+        title: 'My Portfolio',
+        link: 'https://official-simple-soul.github.io/myportfolio/'
     },
 
     {
-        image: 'img/works4.png',
-        title: 'E-Commerce',
+        image: 'img/daura.png',
+        title: 'The Daura',
+        link: 'https://official-simple-soul.github.io/TeamZeusPage/'
     },
 
     {
-        image: 'img/works5.png',
-        title: 'Fintech',
+        image: 'img/foodmania.png',
+        title: 'Food Mania',
+        link: 'https://official-simple-soul.github.io/TeamZeusPage/'
     },
 
     {
-        image: 'img/works1.png',
-        title: 'Fintech',
+        image: 'img/restcountry.png',
+        title: 'Rest Country',
+        link: 'https://official-simple-soul.github.io/restCountry/'
     },
 
     {
-        image: 'img/works2.png',
-        title: 'E-Commerce',
+        image: 'img/finsweet.png',
+        title: 'FinSweet',
+        link: 'https://official-simple-soul.github.io/KodeCampTask5/'
     }
 ]
 
@@ -272,10 +278,12 @@ function getWork() {
     let works =  worksDetails.map(item => {
         return `
                 <div class="col-lg-4">
-                    <div class=" card mb-4 bg-transparent border-0 work-hover" data-aos="zoom-in" data-aos-duration="1000">
-                        <img src="${item.image}" alt="" class="img-fluid imagee">
-                        <button class="btn btn-transparent btn-outline-light position-absolute me-3 mb-3 end-0 bottom-0 work-title">${item.title}</button>
-                    </div>
+                    <a href="${item.link}">
+                        <div class=" card mb-4 bg-transparent border-0 work-hover" data-aos="zoom-in" data-aos-duration="1000">
+                            <img src="${item.image}" alt="" class="img-fluid imagee">
+                            <button class="btn btn-dark shadow btn-outline-light position-absolute me-3 mb-3 end-0 bottom-0 work-title">${item.title}</button>
+                        </div>
+                    </a>
                 </div>`
     }).join('')
     workRow.innerHTML = works;
