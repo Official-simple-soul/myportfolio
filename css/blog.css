@@ -17,6 +17,10 @@ img:hover {
     transform: scale(1.1);
 }
 
+.hidden {
+    display: none;
+}
+
 @media screen and (max-width: 450px) {
     .remove {
         margin-right: 2px !important;

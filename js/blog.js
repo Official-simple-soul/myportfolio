@@ -1,8 +1,9 @@
-const blogRecent = [
+let blogRecent = [
     {
         image: 'img/blog1.png',
-        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
+        title: 'ALorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget est amet a, ac, pellentesque tellus, aliquam mauris. Bibendum massa massa nisi, luctus risus nascetur sit. Massa quam integer leo ac amet cursus leo. Lorem ut et ut nulla rutrum fames arcu.',
+        read: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget est amet a, ac, pellentesque tellus, aliquam mauris. Bibendum massa massa nisi, luctus risus nascetur sit. Massa quam integer leo ac amet cursus leo. Lorem ut et ut nulla rutrum fames arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget est amet a, ac, pellentesque tellus, aliquam mauris. Bibendum massa massa nisi, luctus risus nascetur sit. Massa quam integer leo ac amet cursus leo. Lorem ut et ut nulla rutrum fames arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget est amet a, ac, pellentesque tellus, aliquam mauris. Bibendum massa massa nisi, luctus risus nascetur sit. Massa quam integer leo ac amet cursus leo. Lorem ut et ut nulla rutrum fames arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget est amet a, ac, pellentesque tellus, aliquam mauris. Bibendum massa massa nisi, luctus risus nascetur sit. Massa quam integer leo ac amet cursus leo. Lorem ut et ut nulla rutrum fames arcu.',
         date: 'Aug. 03. 2022',
         button: 'Read Article'
 
@@ -105,12 +106,23 @@ let mode = document.querySelectorAll('.blog-mode');
 let switchMode = document.querySelector('.switch');
 let ads = document.querySelectorAll('.ads-blog');
 
-console.log(ads);
+
+
+// let hidden = document.querySelectorAll('.pik')[0];
+
+// hidden = 'hiddensss';
+// console.log(hidden);
+
+// let ddd = hidden.classList;
+// console.log(ddd);
+
+
+
 // blog recent
 
 function getBlogRecent() {
-    console.log(blogRecent)
     let blogRecentItem =  blogRecent.map(item => {
+
         return `
                 <div class="bg-transparent">
                     <div class="card bg-transparent border-0">
@@ -120,15 +132,17 @@ function getBlogRecent() {
                 </div>
                 <div class="card-body ps-0">
                     <h5 class="card-title">${item.title}</h5>
-                    <p class="card-text text-muted">${item.text}</p>
-                    <button class="btn btn-light btn-outline-dark" style="font-size: 13px;">${item.button}</button>
+                    <p class="card-text text-muted">${item.text.substring(0, 10)}</p>
+                    <p class="card-text text-muted pik hidden">${item.read}</p>
+                    <button class="btn btn-light btn-outline-dark" onclick="clickMe()" style="font-size: 13px;">${item.button}</button>
                 </div>`
     }).join('')
     blogRecentRow.innerHTML = blogRecentItem;
+
+
 }
 getBlogRecent();
 
-// blog featured
 
 for (let i = 0; i < blogFeatured.length; i++) {
     let items = blogFeatured[i];
@@ -222,3 +236,45 @@ switchMode.addEventListener('click', () => {
 
     
 })
+
+// read more
+
+// function clickMe() {
+//     for (let i = 0; i < hidden.length; i++) {
+//         hidden[i].classList.toggle('hidden');
+//     }
+//     // hidden.classList.remove('hidden');
+// }
+
+
+
+
+// console.log(blogRecent)
+// blogRecent[1].splice(0, 1);
+
+// console.log(blogRecent[1])
+
+// function clickMe() {
+//     console.log('clicked')
+// }
+
+// let vehicleDetails = [
+//     {
+//         name: 'Toyota',
+//         model: 'Corolla',
+//         year: '2019',
+//         price: '$10,000',
+//     },
+
+//     {
+//         name: 'Benz',
+//         model: 'Texa',
+//         year: '2015',
+//         price: '$20,000',
+//     }
+// ]
+
+
+// vehicleDetails[0].name = 'aaaaaaa';
+
+// console.log(vehicleDetails[0])
