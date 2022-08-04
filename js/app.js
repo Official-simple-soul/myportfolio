@@ -206,7 +206,7 @@ for (let i = 0; i < educationText.length; i++) {
     rowEdu.innerHTML += educationItem;
 }
 
-// console.log(experienceText);
+// experience Section
 function getExperience() {
     let experience =  experienceText.map(item => {
         return `
@@ -230,48 +230,6 @@ function getExperience() {
     rowExp.innerHTML = experience;
 }
 getExperience();
-
-// count increase
-
-setInterval(() => {
-    if (count1 == 90) {
-        clearInterval();
-    }
-    else{
-        count1++;
-        numberOne.innerHTML = count1 + '%';
-    }
-} , 20);
-
-setInterval(() => {
-    if (count2 == 80) {
-        clearInterval();
-    }
-    else{
-        count2++;
-        numberTwo.innerHTML = count2 + '%';
-    }
-} , 20);
-
-setInterval(() => {
-    if (count3 == 70) {
-        clearInterval();
-    }
-    else{
-        count3++;
-        numberThree.innerHTML = count3 + '%';
-    }
-} , 20);
-
-setInterval(() => {
-    if (count4 == 60) {
-        clearInterval();
-    }
-    else{
-        count4++;
-        numberFour.innerHTML = count4 + '%';
-    }
-} , 20);
 
 // works Section
 function getWork() {
