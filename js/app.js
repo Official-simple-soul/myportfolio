@@ -106,7 +106,7 @@ const worksDetails = [
     {
         image: 'img/foodmania.png',
         title: 'Food Mania',
-        link: 'https://official-simple-soul.github.io/TeamZeusPage/'
+        link: 'https://official-simple-soul.github.io/foodmania.com/'
     },
 
     {
