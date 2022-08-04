@@ -1,9 +1,9 @@
-let blogRecent = [
+const blogRecent = [
     {
         image: 'img/blog1.png',
-        title: 'ALorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget est amet a, ac, pellentesque tellus, aliquam mauris. Bibendum massa massa nisi, luctus risus nascetur sit. Massa quam integer leo ac amet cursus leo. Lorem ut et ut nulla rutrum fames arcu.',
-        read: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget est amet a, ac, pellentesque tellus, aliquam mauris. Bibendum massa massa nisi, luctus risus nascetur sit. Massa quam integer leo ac amet cursus leo. Lorem ut et ut nulla rutrum fames arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget est amet a, ac, pellentesque tellus, aliquam mauris. Bibendum massa massa nisi, luctus risus nascetur sit. Massa quam integer leo ac amet cursus leo. Lorem ut et ut nulla rutrum fames arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget est amet a, ac, pellentesque tellus, aliquam mauris. Bibendum massa massa nisi, luctus risus nascetur sit. Massa quam integer leo ac amet cursus leo. Lorem ut et ut nulla rutrum fames arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget est amet a, ac, pellentesque tellus, aliquam mauris. Bibendum massa massa nisi, luctus risus nascetur sit. Massa quam integer leo ac amet cursus leo. Lorem ut et ut nulla rutrum fames arcu.',
+        title: 'How to Inspect Websites on Mobile Devices with Chrome DevTools',
+        text: 'In this article, we’ll show you how to debug a website on mobile devices.',
+        read: '<span>I was recently designing a website and testing it on my mobile device. I wanted to inspect an element but there is no way to do that, Yes, of course, there are few applications in the market who provided services to inspect your website on various mobile and different browsers, but yeah it is obvious we have to pay for this services to use. <br><br><b>1. Enable USB Debugging</b><br><br>Open the Developer Options screen on your Android. See Configure On-Device Developer Options.<br><br>Select Enable USB Debugging.<br><br><b>2. Connect Mobile Device to Computer</b><br><br>Connect your mobile device to your laptop/computer via USB Cable.<br><br>Change the option from Charging device to File Transfer.<br><br>Press Allow in the Allow User Debugging? popup<br><br><img src="img/article-image.png" alt="article-image" class="w-75"><br><br><b>3. Inspect Website from Laptop</b><br><br>Open your development machine, open chrome<br><br>Go to chrome://inspect#devices.<br><br>Make sure that the Discover USB devices checkbox is enabled.<br><br><img src="img/article-image-2.png" alt="article-image" class="w-75"><br><br>4. Under Remote Target, the sites you opened in your mobile browser will be listed. You can click inspect to debug the site.<br><br><img src="img/article-image-2.png" alt="article-image-3" class="w-75"><br><br><br>In the screen above, you can see our website is running on localhost, as now we can inspect this website on mobile devices in our chrome browser.</span>',
         date: 'Aug. 03. 2022',
         button: 'Read Article'
 
@@ -14,6 +14,7 @@ const blogFeatured = [
     {
         image: 'img/blog2.png',
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
+        read: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
         date: 'Aug. 03. 2022',
         button: 'Read Article'
 
@@ -21,6 +22,7 @@ const blogFeatured = [
     {
         image: 'img/blog3.png',
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
+        read: 'Ade cola is a mongopark and can do shit on heads that are not normal Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
         date: 'Aug. 03. 2022',
         button: 'Read Article'
 
@@ -28,6 +30,7 @@ const blogFeatured = [
     {
         image: 'img/blog4.png',
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
+        read: ' but with the lookof things, lorem is still nt on the verge of the parastatal and cliche Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
         date: 'Aug. 03. 2022',
         button: 'Read Article'
 
@@ -121,6 +124,8 @@ let ads = document.querySelectorAll('.ads-blog');
 // blog recent
 
 function getBlogRecent() {
+    
+
     let blogRecentItem =  blogRecent.map(item => {
 
         return `
@@ -132,14 +137,29 @@ function getBlogRecent() {
                 </div>
                 <div class="card-body ps-0">
                     <h5 class="card-title">${item.title}</h5>
-                    <p class="card-text text-muted">${item.text.substring(0, 10)}</p>
+                    <p class="card-text text-muted rem">${item.text}</p>
                     <p class="card-text text-muted pik hidden">${item.read}</p>
-                    <button class="btn btn-light btn-outline-dark" onclick="clickMe()" style="font-size: 13px;">${item.button}</button>
+                    <button class="btn btn-light btn-outline-dark view" style="font-size: 13px;">${item.button}</button>
                 </div>`
     }).join('')
     blogRecentRow.innerHTML = blogRecentItem;
 
+    let hidden = document.querySelector('.pik');
+    let viewButton = document.querySelector('.view');
+    let rem = document.querySelector('.rem');
 
+    viewButton.addEventListener('click', function() {
+        hidden.classList.toggle('hidden');
+        rem.classList.toggle('hidden');
+
+        if (hidden.classList.contains('hidden')) {
+            viewButton.innerHTML = 'Read Article';
+        }
+        else {
+            viewButton.innerHTML = 'Read Less';
+        }
+    })
+    
 }
 getBlogRecent();
 
@@ -155,11 +175,43 @@ for (let i = 0; i < blogFeatured.length; i++) {
                             <div class="col-lg-6 col-md-6 col-12 mb-5">
                                 <div class="card bg-transparent border-0">
                                     <p class="text-muted mb-1" style="font-size: 15px;">03 - 08 - 2022</p>
-                                    <p class="" style="font-size: 13px;">${items.title}</p>
+                                    <p class="rem-featured" style="font-size: 13px;">${items.title}</p>
+                                    <p class="pik-featured hidden" style="font-size: 13px;">${items.read}</p>
                                 </div>
-                                <button class="btn btn-light btn-outline-dark" style="font-size: 13px;">${items.button}</button>
+                                <button class="btn btn-light btn-outline-dark view-featured" style="font-size: 13px;">${items.button}</button>
                             </div>`
     blogFeaturedRow.innerHTML += blogFeaturedItem;
+    
+    let hidden = document.querySelectorAll('.pik-featured');
+    console.log(hidden);
+    let viewButton = document.querySelectorAll('.view-featured');
+    let rem = document.querySelectorAll('.rem-featured');
+
+    for (let i = 0; i < viewButton.length; i++) {
+        viewButton[i].addEventListener('click', function() {
+            hidden[i].classList.toggle('hidden');
+            rem[i].classList.toggle('hidden');
+
+            if (hidden[i].classList.contains('hidden')) {
+                viewButton[i].innerHTML = 'Read Article';
+            }
+            else {
+                viewButton[i].innerHTML = 'Read Less';
+            }
+        }
+        )
+    }
+    // viewButton.addEventListener('click', function() {
+    //     hidden.classList.toggle('hidden');
+    //     rem.classList.toggle('hidden');
+
+    //     if (hidden.classList.contains('hidden')) {
+    //         viewButton.innerHTML = 'Read Article';
+    //     }
+    //     else {
+    //         viewButton.innerHTML = 'Read Less';
+    //     }
+    // })
 }
 
 // blog popular
@@ -237,44 +289,3 @@ switchMode.addEventListener('click', () => {
     
 })
 
-// read more
-
-// function clickMe() {
-//     for (let i = 0; i < hidden.length; i++) {
-//         hidden[i].classList.toggle('hidden');
-//     }
-//     // hidden.classList.remove('hidden');
-// }
-
-
-
-
-// console.log(blogRecent)
-// blogRecent[1].splice(0, 1);
-
-// console.log(blogRecent[1])
-
-// function clickMe() {
-//     console.log('clicked')
-// }
-
-// let vehicleDetails = [
-//     {
-//         name: 'Toyota',
-//         model: 'Corolla',
-//         year: '2019',
-//         price: '$10,000',
-//     },
-
-//     {
-//         name: 'Benz',
-//         model: 'Texa',
-//         year: '2015',
-//         price: '$20,000',
-//     }
-// ]
-
-
-// vehicleDetails[0].name = 'aaaaaaa';
-
-// console.log(vehicleDetails[0])
