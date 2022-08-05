@@ -12,17 +12,17 @@ const blogRecent = [
 
 const blogFeatured = [
     {
-        image: 'img/blog2.png',
-        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
-        read: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
-        date: 'Aug. 03. 2022',
+        image: 'img/kodecampfinal.png',
+        title: 'Completed Front-End Web Development Training at Kodecamp',
+        read: 'It wasnt an easy journey, but with hardwork, commitmment and most especialy Grit. I was able to start the training, performed to my best ability and completed the program successfully.<br><br> One of the things i learnt while taking this program was to never give up, you have to keep trying and be consistent in your efforts. <br><br> I am very happy to be able to share this experience with you. <br><br> Thank you for reading this article.',
+        date: 'July. 24. 2022',
         button: 'Read Article'
 
     },
     {
-        image: 'img/blog3.png',
-        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
-        read: 'Ade cola is a mongopark and can do shit on heads that are not normal Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum ullamcorper sit elementum.',
+        image: 'img/kodecamp.jfif',
+        title: 'Kodecamp final Ceremony<br><br>Kodecamp final ceremony was really amazing',
+        read: 'So, kodecamp final ceremoney was held in four different location(Lagos, Abuja, Port-Harcort and Eket).<br><br>I was able to attend the Lagos venue. Was fantastic nad memorable. I was able to meet with some great persons, likes of <b>Mubarak, Morenikeji, Titilayo, Merit, Salam, Tolu, Clint, and more</b><br><br>. I only wish that day will never end, but what can i do. I also met with mento <b>Phemmyblaze and Imoleayo</b> who were very helpful and supportive.<br><br>I wish all the best to all the participants and I hope that you will be able to attend the next kodecamp final ceremony.',
         date: 'Aug. 03. 2022',
         button: 'Read Article'
 
@@ -107,17 +107,8 @@ let blogHeadlineOneRow = document.querySelector('.row-headline-one');
 let blogHeadlineTwoRow = document.querySelector('.row-headline-two')
 let mode = document.querySelectorAll('.blog-mode');
 let switchMode = document.querySelector('.switch');
-let ads = document.querySelectorAll('.ads-blog');
+// let cards = document.querySelectorAll('.card');
 
-
-
-// let hidden = document.querySelectorAll('.pik')[0];
-
-// hidden = 'hiddensss';
-// console.log(hidden);
-
-// let ddd = hidden.classList;
-// console.log(ddd);
 
 
 
@@ -163,18 +154,18 @@ function getBlogRecent() {
 }
 getBlogRecent();
 
-
+// blog featured
 for (let i = 0; i < blogFeatured.length; i++) {
     let items = blogFeatured[i];
     let blogFeaturedItem = `
-                            <div class="col-lg-6 col-md-6 col-12 mb-5">
+                            <div class="col-lg-6 col-md-6 col-12 mb-4">
                                 <div class="card bg-transparent border-0">
                                     <img src="${items.image}" alt="" class="image-fluid">
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-12 mb-5">
+                            <div class="col-lg-6 col-md-6 col-12 mb-4">
                                 <div class="card bg-transparent border-0">
-                                    <p class="text-muted mb-1" style="font-size: 15px;">03 - 08 - 2022</p>
+                                    <p class="text-muted mb-1" style="font-size: 15px;">${items.date}</p>
                                     <p class="rem-featured" style="font-size: 13px;">${items.title}</p>
                                     <p class="pik-featured hidden" style="font-size: 13px;">${items.read}</p>
                                 </div>
@@ -183,14 +174,12 @@ for (let i = 0; i < blogFeatured.length; i++) {
     blogFeaturedRow.innerHTML += blogFeaturedItem;
     
     let hidden = document.querySelectorAll('.pik-featured');
-    console.log(hidden);
     let viewButton = document.querySelectorAll('.view-featured');
     let rem = document.querySelectorAll('.rem-featured');
 
     for (let i = 0; i < viewButton.length; i++) {
         viewButton[i].addEventListener('click', function() {
             hidden[i].classList.toggle('hidden');
-            rem[i].classList.toggle('hidden');
 
             if (hidden[i].classList.contains('hidden')) {
                 viewButton[i].innerHTML = 'Read Article';
@@ -201,17 +190,6 @@ for (let i = 0; i < blogFeatured.length; i++) {
         }
         )
     }
-    // viewButton.addEventListener('click', function() {
-    //     hidden.classList.toggle('hidden');
-    //     rem.classList.toggle('hidden');
-
-    //     if (hidden.classList.contains('hidden')) {
-    //         viewButton.innerHTML = 'Read Article';
-    //     }
-    //     else {
-    //         viewButton.innerHTML = 'Read Less';
-    //     }
-    // })
 }
 
 // blog popular
@@ -220,7 +198,7 @@ function getBlogPopular() {
     let blogRecentItem =  blogPopular.map(item => {
         return `
                 <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card bg-transparent border shadow p-2">
+                    <div class="card bg-transparent border-0 shadow p-2">
                         <div class="card border-0 bg-transparent">
                             <img src="${item.image}" alt="">
                         </div>
@@ -242,7 +220,7 @@ for (let i = 0; i < blogHeadlineOne.length; i++) {
     let items = blogHeadlineOne[i];
     let blogHeadlineOneItem = `
                             <div class="col-lg-6 col-md-6 col-12">
-                                <div class="card bg-transparent border shadow p-2">
+                                <div class="card bg-transparent border-0 shadow p-2">
                                     <div class="card bg-transparent border-0">
                                         <img src="${items.image}" alt="">
                                     </div>
@@ -262,7 +240,7 @@ for (let i = 0; i < blogHeadlineTwo.length; i++) {
     let items = blogHeadlineTwo[i];
     let blogHeadlineTwoItem = `
                             <div class="col-lg-4 col-md-6 col-12">
-                                <div class="card bg-transparent border shadow p-2">
+                                <div class="card bg-transparent border-0 shadow p-2">
                                     <div class="card bg-transparent border shadow">
                                         <img src="${items.image}" alt="">
                                     </div>
@@ -278,14 +256,7 @@ switchMode.addEventListener('click', () => {
     for (let i = 0; i < mode.length; i++) {
         mode[i].classList.toggle('bg-dark');
         mode[i].classList.toggle('text-light');
-    }
 
-    for (let i = 0; i < ads.length; i++) {
-        ads[i].classList.add('btn-light');
-        ads[i].classList.remove('btn-dark');
-        // ads[i].classList.toggle('text-dark');
     }
-
     
 })
-

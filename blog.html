@@ -17,9 +17,9 @@
     <!-- custom css -->
     <link rel="stylesheet" href="css/blog.css">
 
-    <title>My portfolio</title>
+    <title>My portfolio Blog</title>
 </head>
-<body>
+<body class="bg-light blog-mode">
 
     <!-- header -->
     <header class="bg-dark">
@@ -27,32 +27,17 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt="" class="rounded-circle" style="width: 60px; height: 61px"></a>
+                  <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="" class="rounded-circle" style="width: 50px; height: 51px"></a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-circle-chevron-down fs-1 text-light"></i>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                       <li class="nav-item">
                         <a class="nav-link text-light mx-3 active navhov" aria-current="page" href="index.html">HOME</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-light mx-3 navhov" href="#about">ABOUT</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-light mx-3 navhov" href="#works">SERVICE</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-light mx-3 navhov" href="#works">WORKS</a>
-                      </li>
-                      <li class="nav-item">
                         <a class="nav-link text-light mx-3 navhov" href="blog.html">BLOG</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-light mx-3 navhov" href="#resume">RESUME</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-light mx-3 navhov" href="#contact">CONTACT</a>
                       </li>
                     </ul>
                     <form class="d-flex form-switch">
@@ -60,7 +45,7 @@
                     </form>
                   </div>
                   <form action="" class="form-switch ms-3">
-                    <input class="form-check-input p-1 switch" type="checkbox" id="flexSwitchCheckChecked" checked>
+                    <input class="form-check-input p-1 switch" type="checkbox" id="flexSwitchCheckDefault">
                 </form>
                 </div>
             </nav>
@@ -70,10 +55,10 @@
     <!-- end of header -->
 
     <!-- blog head -->
-    <section id="blog-head" class="py-5 bg-dark">
+    <section id="blog-head" class="mt- py-1 bg-dark ">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="card bg-transparent border-0 my-2">
                         <a href="index.html" class="text-decoration-none"><div class="d-flex justify-content-start align-items-center text-light">
                             <i class="fa-solid fa-arrow-left-long"></i>
@@ -81,21 +66,11 @@
                         </div></a>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="card bg-transparent border-0 my-2">
-                        <form action="get"  class="d-flex justify-content-start align-items-center p-1 border border-light rounded">
-                            <button type="submit" class="border-0 bg-transparent text-muted"><i class="fa-solid fa-magnifying-glass"></i></button>
-                            <input type="text" class="border-0 bg-transparent ms-2 w-100 blog-none" placeholder="search">
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card bg-transparent border-0 my-2">
-                        <div class="d-flex justify-content-between align-items-center text-light">
-                            <button class="btn btn-transparent btn-outline-light active ms-2 py-1 remove">All</button>
-                            <button class="btn btn-transparent btn-outline-light mx-2 py-1 remove">Recent</button>
-                            <button class="btn btn-transparent btn-outline-light mx-2 py-1 remove">Featured</button>
-                            <button class="btn btn-transparent btn-outline-light me-2 py-1 remove">Popular</button>
+                        <div class="d-flex justify-content-end align-items-center text-light">
+                            <a href="#popular" class="text-decoration-none"><button class="btn btn-transparent btn-outline-light mx-2 py-1 remove featured" style="font-size: 11px;">Popular</button></a>
+                            <a href="#headlines-one" class="text-decoration-none"><button class="btn btn-transparent btn-outline-light me-2 py-1 remove popular" style="font-size: 11px;">Headlines</button></a>
                         </div>
                     </div>
                 </div>
@@ -153,9 +128,6 @@
             </div>
         </div>
     </section>
-
-
-
 
     <!-- footer section -->
     <footer class="pt-5 bg-dark">
