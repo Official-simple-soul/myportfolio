@@ -1,38 +1,38 @@
 const aboutText = [
     {
         image: '<i class="fa-solid fa-laptop-code fs-1"></i>',
-        title: 'Web Dev',
-        text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
+        title: 'Web Devevelopement',
+        text: 'Web developemnt'
     },
 
     {
         image: '<i class="fa-solid fa-laptop-code fs-1"></i>',
-        title: 'Web Design',
-        text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
+        title: 'Web Creation',
+        text: 'Bringing your design ideas to life'
     },
 
     {
         image: '<i class="fa-solid fa-laptop fs-1"></i>',
-        title: 'Web Flow',
-        text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
+        title: 'Web Management',
+        text: 'Manage your website'
     },
 
     {
         image: '<i class="fa-solid fa-laptop-code fs-1"></i>',
-        title: 'Web Dev',
-        text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
+        title: 'Frontend Mentorship',
+        text: 'Mentoring your front-end skills'
     },
 
     {
         image: '<i class="fa-solid fa-laptop fs-1"></i>',
-        title: 'Web Design',
-        text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
+        title: 'Trainings',
+        text: 'help you build your skills by constructive training'
     },
 
     {
         image: '<i class="fa-solid fa-laptop-code fs-1"></i>',
-        title: 'Web Flow',
-        text: 'Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.'
+        title: 'Consulting',
+        text: 'Answering to your calls when you need it'
     }
 ]
 
@@ -40,21 +40,21 @@ const educationText = [
     {
         image: 'img/list-style.png',
         title: 'Front-End Developement',
-        text: 'Sed odio cursus felis dolor pellentesque. dolordolor pe Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.pellentesque.',
+        text: 'Manage all team members from different to achieve the project goal of developing a blog website application for Kodehauz. Coordinate and assign tasks to the frontend team, review their submission and give feedback. As well as creating some UI/UX designs.',
         date: '2022 - 2022',
         institution: 'KodeCamp Bootcamp'
     },
     {
         image: 'img/list-style.png',
         title: 'Front-End Development',
-        text: 'Sed odio cursus felis dolor pellentesque. dolordolor pe Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.pellentesque.',
-        date: '2020 - 2021',
+        text: 'HTML, CSS, Bootstrap, Javascript and React',
+        date: '2022 - 2022',
         institution: 'SimpliLearn Online Institute'
     },
     {
         image: 'img/list-style.png',
         title: 'Estate Management',
-        text: 'Sed odio cursus felis dolor pellentesque. dolordolor pe Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.pellentesque.',
+        text: 'Property Valuation, Property Management, Letting and Sales, Rating and Taxation',
         date: '2013 - 2019',
         institution: 'Federal University of Technology, Minna'
     }
@@ -64,23 +64,23 @@ const experienceText = [
     {
         image: '/img/list-style.png',
         title: 'KodeCamp Blog website',
-        text: 'Sed odio cursus felis dolor pellentesque. dolordolor pe Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.pellentesque.',
+        text: 'Manage all team members to achieve the project goal of developing a blog website application. Coordinate and assign tasks to the frontend team, review their submission and give feedback.',
         date: '2022 - 2022',
         institution: 'KodeCamp Bootcamp'
     },
     {
         image: '/img/list-style.png',
-        title: 'Web Development',
-        text: 'Sed odio cursus felis dolor pellentesque. dolordolor pe Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.pellentesque.',
-        date: '2018 - 2019',
-        institution: 'University'
+        title: 'Administrative Assitant/ IT Personnel,',
+        text: 'Administrative activities Staff management, social media management, data analysis, website management (WordPress)',
+        date: '2020 - Till Date',
+        institution: 'Land of Hope (ACAEDF)'
     },
     {
         image: '/img/list-style.png',
-        title: 'Web Development',
-        text: 'Sed odio cursus felis dolor pellentesque. dolordolor pe Sed odio cursus felis dolor pellentesque.dolordolor pe pellentesque.pellentesque.',
-        date: '2018 - 2019',
-        institution: 'University'
+        title: 'Interim Surveyor',
+        text: 'Property Valuation, Property Management, Letting and Sales, Rating and Taxation',
+        date: '2019 - 2020',
+        institution: 'Jide Taiwo & Co.'
     }
 ]
 
@@ -88,59 +88,65 @@ const worksDetails = [
     {
         image: 'img/kodeblog.png',
         title: 'KodeCamp Blog website',
-        link: 'https://official-simple-soul.github.io/TeamKodecampBlog/'
+        link: 'https://official-simple-soul.github.io/TeamKodecampBlog/',
+        code: 'https://github.com/Official-simple-soul/TeamKodecampBlog'
     },
 
     {
         image: 'img/portfolio.png',
         title: 'My Portfolio',
-        link: 'https://official-simple-soul.github.io/myportfolio/'
+        link: 'https://official-simple-soul.github.io/myportfolio/',
+        code: 'https://github.com/Official-simple-soul/myportfolio'
     },
 
     {
         image: 'img/daura.png',
         title: 'The Daura',
-        link: 'https://official-simple-soul.github.io/TeamZeusPage/'
+        link: 'https://official-simple-soul.github.io/TeamZeusPage/',
+        code: 'https://github.com/Official-simple-soul/TeamZeusPage'
     },
 
     {
         image: 'img/foodmania.png',
         title: 'Food Mania',
-        link: 'https://official-simple-soul.github.io/foodmania.com/'
+        link: 'https://official-simple-soul.github.io/foodmania.com/',
+        code: 'https://github.com/Official-simple-soul/foodmania.com'
     },
 
     {
         image: 'img/restcountry.png',
         title: 'Rest Country',
-        link: 'https://official-simple-soul.github.io/restCountry/'
+        link: 'https://official-simple-soul.github.io/restCountry/',
+        code: 'https://github.com/Official-simple-soul/restCountry'
     },
 
     {
         image: 'img/finsweet.png',
         title: 'FinSweet',
-        link: 'https://official-simple-soul.github.io/KodeCampTask5/'
+        link: 'https://official-simple-soul.github.io/KodeCampTask5/',
+        code: 'https://github.com/Official-simple-soul/KodeCampTask5'
     }
 ]
 
 const successStory = [
     {
         image: '<i class="fa-solid fa-hourglass-end fs-2"></i>',
-        title: '200',
+        title: '5',
         text: 'Completed project',
     },
     {
         image: '<i class="fa-solid fa-face-laugh fs-2"></i>',
-        title: '150',
+        title: '15',
         text: 'Happy clients',
     },
     {
         image: '<i class="fa-solid fa-code fs-2"></i>',
-        title: '10k',
+        title: '10k+',
         text: 'Line codes written',
     },
     {
         image: '<i class="fa-solid fa-spinner fs-2"></i>',
-        title: '30',
+        title: '10',
         text: 'Projects in progress',
     },
 ]
@@ -236,15 +242,40 @@ function getWork() {
     let works =  worksDetails.map(item => {
         return `
                 <div class="col-lg-4">
-                    <a href="${item.link}">
-                        <div class=" card mb-4 bg-transparent border-0 work-hover" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class=" card mb-4 bg-transparent border-0 work-hover" data-aos="zoom-in" data-aos-duration="1000" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <img src="${item.image}" alt="" class="img-fluid imagee">
                             <button class="btn btn-dark shadow btn-outline-light position-absolute me-3 mb-3 end-0 bottom-0 work-title">${item.title}</button>
                         </div>
-                    </a>
                 </div>`
     }).join('')
     workRow.innerHTML = works;
+
+    let modalRow = document.querySelector('.modal-row');
+
+function getModal() {
+
+    let modal =  worksDetails.map(item => {
+        return `<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-md mo" role="document">
+                        <div class="modal-content bg-light">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body d-flex justify-content-center border-0">
+                                <a href="${item.code}" target="_blank"><button type="button" class="btn btn-dark mx-1">View Web Code</button></a>
+                                <a href="${item.link}" target="_blank"><button type="button" class="btn btn-dark mx-1">View Web Output</button></a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+    }).join('')
+    modalRow.innerHTML = modal;
+}
+getModal();
+
 }
 getWork();
 
@@ -268,7 +299,7 @@ setInterval(() => {
     changeCount++
 
     if (changeCount == 100) {
-        changeText.textContent = 'SIMPLE_SOUL IS A WEB DEVELOPER';
+        changeText.textContent = 'WEB DEVELOPER';
         changeText.classList.add('fade-in');
     }
 
@@ -277,7 +308,7 @@ setInterval(() => {
     }
 
     if (changeCount == 200) {
-        changeText.textContent = 'I BRING YOUR DESIGN TO LIFE';
+        changeText.textContent = 'I BRING DESIGN TO LIFE';
         changeText.classList.add('fade-in');
     }
 
@@ -286,7 +317,7 @@ setInterval(() => {
     }
 
     if (changeCount == 300) {
-        changeText.textContent = 'HE IS THE PERFECT DEVELOPER TO CONTACT';
+        changeText.textContent = 'CREATIVE WEB DEVELOPER';
         changeText.classList.add('fade-in');
     }
 
@@ -296,7 +327,7 @@ setInterval(() => {
 
     else if (changeCount == 400) {
         changeCount -= 400;
-        changeText.textContent = 'SIMPLE_SOUL NEED A CONTENTS WRITER';
+        changeText.textContent = 'PASSION';
         changeText.classList.add('fade-in');
     }
 
@@ -320,6 +351,10 @@ switchMode.addEventListener('click', () => {
         }
     }
 })
+
+
+// bootstrap modal
+
 
 
 

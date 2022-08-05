@@ -312,13 +312,6 @@ footer {
     }
 }
 
-.hhh {
-    transition: margin-top 1s ease-in-out;
-    transition: position 1s ease-in-out;
-    transition: color 1s ease-in-out;
-    borde
-}
-
 @media (max-width: 800px) {
     .header-content {
         width: 80% !important;
@@ -335,6 +328,10 @@ footer {
 
     .small {
         justify-content: center !important;
+    }
+
+    .mod {
+        width: 70% !important;
     }
 }
 
@@ -357,6 +354,10 @@ footer {
 
     .work-title{
         opacity: 1 !important;
+    }
+
+    .mod {
+        width: 100% !important;
     }
 }
 
