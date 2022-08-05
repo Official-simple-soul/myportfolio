@@ -257,13 +257,13 @@ function getModal() {
     let modal =  worksDetails.map(item => {
         return `<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-md mo" role="document">
-                        <div class="modal-content bg-light">
+                        <div class="modal-content bg-light bg">
                             <div class="modal-header">
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body d-flex justify-content-center border-0">
-                                <a href="${item.code}" target="_blank"><button type="button" class="btn btn-dark mx-1">View Web Code</button></a>
-                                <a href="${item.link}" target="_blank"><button type="button" class="btn btn-dark mx-1">View Web Output</button></a>
+                                <a href="${item.code}" target="_blank"><button type="button" class="btn btn-light mx-1">View Web Code</button></a>
+                                <a href="${item.link}" target="_blank"><button type="button" class="btn btn-light mx-1">View Web Output</button></a>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>

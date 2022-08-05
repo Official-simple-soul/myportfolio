@@ -277,6 +277,10 @@ footer {
     transition: all 1s ease-in-out;
 }
 
+.bg {
+    background: url(/img/bg.jpg) no-repeat center;
+}
+
 #blog-head input:focus {
     outline: none !important;
     color: rgba(245, 245, 245, 0.822) !important;
