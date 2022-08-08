@@ -16,7 +16,7 @@ const blogFeatured = [
         image: 'img/kodecamp.jfif',
         name: 'Simple_soul',
         title: 'Kodecamp final Ceremony<br><br>Kodecamp final ceremony was really amazing',
-        read: 'So, kodecamp final ceremoney was held in four different location(Lagos, Abuja, Port-Harcort and Eket).<br><br>I was able to attend the Lagos venue. Was fantastic nad memorable. I was able to meet with some great persons, likes of <b>Mubarak, Morenikeji, Titilayo, Merit, Salam, Tolu, Clint, and more</b><br><br>. I only wish that day will never end, but what can i do. I also met with mento <b>Phemmyblaze and Imoleayo</b> who were very helpful and supportive.<br><br>I wish all the best to all the participants and I hope that you will be able to attend the next kodecamp final ceremony.',
+        read: 'So, kodecamp final ceremoney was held in four different location(Lagos, Abuja, Port-Harcort and Eket).<br><br>I was able to attend the Lagos venue. Was fantastic nad memorable. I was able to meet with some great persons, likes of <b>Mubaraq, Morenikeji, Titilayo, Merit, Samad, tmd, Tolu, Clint, and more</b><br><br>I only wish that day will never end, but what can i do. I also met with mento <b>Phemmyblaze and Imoleayo</b> who were very helpful and supportive.<br><br>I wish all the best to all the participants and I hope that you will be able to attend the next kodecamp final ceremony.',
         date: 'July. 25. 2022',
         button: 'Read Article'
 
@@ -43,7 +43,7 @@ const blogFeatured = [
 
 const blogPopular = [
     {
-        image: 'img/javascript.png',
+        image: '../img/javascript.png',
         name: 'Simple_soul',
         title: 'Javascript, Understanding javascript as a programming Language',
         read: 'JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users devices. <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">Read More</a>',
@@ -124,7 +124,12 @@ let blogHeadlineOneRow = document.querySelector('.row-headline-one');
 let blogHeadlineTwoRow = document.querySelector('.row-headline-two')
 let mode = document.querySelectorAll('.blog-mode');
 let switchMode = document.querySelector('.switch');
-// let cards = document.querySelectorAll('.card');
+let email = document.querySelector('.email');
+let subscribeBtn = document.querySelector('.get-content');
+let subscribeContent = document.querySelector('.modal-row-one');
+let closeBtn = document.querySelector('.close-btn');
+let subscribeText = document.querySelector('.subscribe-text');
+let faMoon = document.querySelector('.fa-moon');
 
 
 
@@ -309,11 +314,38 @@ for (let i = 0; i < blogHeadlineTwo.length; i++) {
     blogHeadlineTwoRow.innerHTML += blogHeadlineTwoItem;
 }
 
+// swtch to dark mode
 switchMode.addEventListener('click', () => {
     for (let i = 0; i < mode.length; i++) {
         mode[i].classList.toggle('bg-dark');
         mode[i].classList.toggle('text-light');
 
     }
+    faMoon.classList.toggle('fa-moon-new');
+})
+
+// subscribe
+subscribeBtn.addEventListener('click', () => {
     
+    value = email.value;
+    if (value == '') {
+        alert('Please enter your email');
+    }
+    else if (value.indexOf('@') == -1) {
+        alert('Please enter a valid email');
+    }
+    else {
+        subscribeContent.classList.remove('hidden');
+        subscribeText.innerHTML = `<p class="text-light text-center">Hey! ${value}, thank you for subscribing to my blog</p>`;
+        email.value = '';
+    }
+
+    setInterval(() => {
+        subscribeContent.classList.add('hidden');
+    }, 5000);
+})
+
+// subscribe close
+closeBtn.addEventListener('click', () => {
+    subscribeContent.classList.add('hidden');
 })

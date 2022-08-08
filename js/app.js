@@ -87,42 +87,36 @@ const experienceText = [
 const worksDetails = [
     {
         image: 'img/kodeblog.png',
-        title: 'KodeCamp Blog website',
         link: 'https://official-simple-soul.github.io/TeamKodecampBlog/',
         code: 'https://github.com/Official-simple-soul/TeamKodecampBlog'
     },
 
     {
         image: 'img/portfolio.png',
-        title: 'My Portfolio',
         link: 'https://official-simple-soul.github.io/myportfolio/',
         code: 'https://github.com/Official-simple-soul/myportfolio'
     },
 
     {
         image: 'img/daura.png',
-        title: 'The Daura',
         link: 'https://official-simple-soul.github.io/TeamZeusPage/',
         code: 'https://github.com/Official-simple-soul/TeamZeusPage'
     },
 
     {
         image: 'img/foodmania.png',
-        title: 'Food Mania',
         link: 'https://official-simple-soul.github.io/foodmania.com/',
         code: 'https://github.com/Official-simple-soul/foodmania.com'
     },
 
     {
         image: 'img/restcountry.png',
-        title: 'Rest Country',
         link: 'https://official-simple-soul.github.io/restCountry/',
         code: 'https://github.com/Official-simple-soul/restCountry'
     },
 
     {
         image: 'img/finsweet.png',
-        title: 'FinSweet',
         link: 'https://official-simple-soul.github.io/KodeCampTask5/',
         code: 'https://github.com/Official-simple-soul/KodeCampTask5'
     }
@@ -166,12 +160,13 @@ let changeText = document.querySelector('.change-text');
 let mode = document.querySelectorAll('.mode');
 let switchMode = document.querySelector('.switch');
 let ads = document.querySelector('.ads');
+let email = document.querySelector('.email');
+let subscribeBtn = document.querySelector('.get-content');
+let subscribeContent = document.querySelector('.modal-row-one');
+let closeBtn = document.querySelector('.close-btn');
+let subscribeText = document.querySelector('.subscribe-text');
+let faMoon = document.querySelector('.fa-moon');
 
-
-let count1 = 0;
-let count2 = 0;
-let count3 = 0;
-let count4 = 0;
 let changeCount = 0;
 
 
@@ -242,40 +237,14 @@ function getWork() {
     let works =  worksDetails.map(item => {
         return `
                 <div class="col-lg-4">
-                        <div class=" card mb-4 bg-transparent border-0 work-hover" data-aos="zoom-in" data-aos-duration="1000" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class=" card mb-4 bg-transparent border-0 work-hover" data-aos="zoom-in" data-aos-duration="1000">
                             <img src="${item.image}" alt="" class="img-fluid imagee">
-                            <button class="btn btn-dark shadow btn-outline-light position-absolute me-3 mb-3 end-0 bottom-0 work-title">${item.title}</button>
+                            <a href="${item.link}" target="_blank"><button class="btn btn-dark shadow btn-outline-light position-absolute me-3 mb-3 end-0 bottom-0 work-title">Go Live</button></a>
+                            <a href="${item.code}" target="_blank"><button class="btn btn-dark shadow btn-outline-light position-absolute ms-3 mt-3 start-0 top-0 work-title">View Code</button></a>
                         </div>
                 </div>`
     }).join('')
     workRow.innerHTML = works;
-
-    let modalRow = document.querySelector('.modal-row');
-
-function getModal() {
-
-    let modal =  worksDetails.map(item => {
-        return `<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-md mo" role="document">
-                        <div class="modal-content bg-light bg">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body d-flex justify-content-center border-0">
-                                <a href="${item.code}" target="_blank"><button type="button" class="btn btn-light mx-1">View Web Code</button></a>
-                                <a href="${item.link}" target="_blank"><button type="button" class="btn btn-light mx-1">View Web Output</button></a>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>`
-    }).join('')
-    modalRow.innerHTML = modal;
-}
-getModal();
-
 }
 getWork();
 
@@ -350,12 +319,34 @@ switchMode.addEventListener('click', () => {
             mode[i].classList.remove('bg-white');
         }
     }
+    faMoon.classList.toggle('fa-moon-new');
 })
 
+// subscribe to newsletter
 
-// bootstrap modal
+subscribeBtn.addEventListener('click', () => {
+    
+    value = email.value;
+    if (value == '') {
+        alert('Please enter your email');
+    }
+    else if (value.indexOf('@') == -1) {
+        alert('Please enter a valid email');
+    }
+    else {
+        subscribeContent.classList.remove('hidden');
+        subscribeText.innerHTML = `<p class="text-light text-center">Hey! ${value}, thank you for subscribing to my blog</p>`;
+        email.value = '';
+    }
 
+    setTimeout(() => {
+        subscribeContent.classList.add('hidden');
+    }, 5000);
+})
 
+closeBtn.addEventListener('click', () => {
+    subscribeContent.classList.add('hidden');
+})
 
 
 

@@ -1,0 +1,28 @@
+@import url(style.css);
+
+.hire-form:focus {
+    box-shadow: none !important;
+    border-color: rgb(0, 0, 0) !important;
+}
+
+.hire-form2:focus {
+    color: white !important;
+}
+
+.hire-select:hover {
+    color: rgb(80, 80, 80) !important;
+}
+
+.back-text-change {
+    color: white !important;
+}
+
+.hire-submit-change {
+    background: rgb(255, 253, 253) !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.hire-select-change {
+    background: rgb(5, 5, 5) !important;
+    color: rgb(255, 255, 255) !important;
+}
