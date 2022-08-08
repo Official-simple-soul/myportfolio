@@ -26,3 +26,14 @@
     background: rgb(5, 5, 5) !important;
     color: rgb(255, 255, 255) !important;
 }
+
+@media screen and (max-width: 450px) {
+    .column {
+        flex-direction: column !important;
+        text-align: center;
+}
+.center {
+    text-align: center;
+}
+    
+}
