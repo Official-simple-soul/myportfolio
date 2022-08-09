@@ -345,7 +345,6 @@ footer {
     padding: 20px;
     border-radius: 5px;
     width: 30%;
-    height: 30%;
     z-index: 3;
 }
 
@@ -397,7 +396,7 @@ footer {
 
     .modal-content {
         width: 50%;
-        height: 20%;
+        /* height: 20%; */
     }
 }
 
@@ -428,7 +427,7 @@ footer {
 
     .modal-content {
         width: 90%;
-        height: 20%;
+        /* height: 20%; */
     }
 
     .swiper {

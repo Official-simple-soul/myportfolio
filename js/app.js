@@ -114,10 +114,12 @@ let email = document.querySelector('.email');
 let subscribeBtn = document.querySelector('.get-content');
 let subscribeContent = document.querySelector('.modal-row-one');
 let closeBtn = document.querySelector('.close-btn');
+let windowCloseBtn = document.querySelector('.window-close-btn');
 let subscribeText = document.querySelector('.subscribe-text');
 let moon = document.querySelector('.moon');
 let darkLight = document.querySelector('.dark-light');
 let backText = document.querySelectorAll('.back-text');
+let windowRow = document.querySelector('.window-row');
 
 let changeCount = 0;
 
@@ -285,6 +287,23 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-scrollbar',
     },
   });
+
+//   window onload modal
+window.onload = function() {
+    console.log('windowRow');
+    windowRow.classList.remove('hidden');
+
+    setTimeout(() => {
+        windowRow.classList.add('hidden');
+    } , 7000);
+}
+
+windowCloseBtn.addEventListener('click', () => {
+    windowRow.classList.add('hidden');
+})
+
+// console.log(document.body.innerHTML);
+
 
 
 
