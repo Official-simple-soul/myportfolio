@@ -6,6 +6,11 @@ let backText = document.querySelectorAll('.back-text');
 let hireSubmit = document.querySelector('.hire-submit');
 let hireSelect = document.querySelectorAll('.hire-select');
 let hireForm = document.querySelectorAll('.hire-form');
+let email = document.querySelector('.email');
+let subscribeBtn = document.querySelector('.get-content');
+let subscribeContent = document.querySelector('.modal-row-one');
+let closeBtn = document.querySelector('.close-btn');
+let subscribeText = document.querySelector('.subscribe-text');
 
 
 // dark mode
@@ -34,7 +39,6 @@ moon.addEventListener('click', () => {
     moon.classList.toggle('light');
 })
 
-
 // select one option
 hireSelect.forEach(function(item) {
     item.addEventListener('click', function() {
@@ -43,3 +47,28 @@ hireSelect.forEach(function(item) {
         this.classList.add('hire-select-change');
     })
 });
+
+// subscribe to newsletter
+subscribeBtn.addEventListener('click', () => {
+    
+    value = email.value;
+    if (value == '') {
+        alert('Please enter your email');
+    }
+    else if (value.indexOf('@') == -1) {
+        alert('Please enter a valid email');
+    }
+    else {
+        subscribeContent.classList.remove('hidden');
+        subscribeText.innerHTML = `<p class="text-light text-center">Hey! ${value}, thank you for subscribing to my blog</p>`;
+        email.value = '';
+    }
+
+    setTimeout(() => {
+        subscribeContent.classList.add('hidden');
+    }, 5000);
+})
+
+closeBtn.addEventListener('click', () => {
+    subscribeContent.classList.add('hidden');
+})

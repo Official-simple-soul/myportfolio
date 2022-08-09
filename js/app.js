@@ -236,7 +236,6 @@ moon.addEventListener('click', () => {
 })
 
 // subscribe to newsletter
-
 subscribeBtn.addEventListener('click', () => {
     
     value = email.value;
