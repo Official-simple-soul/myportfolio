@@ -1,11 +1,12 @@
-let faMoon = document.querySelector('.fa-moon');
+let moon = document.querySelector('.moon');
+let darkLight = document.querySelector('.dark-light');
 let mode = document.querySelectorAll('.mode');
 let switchMode = document.querySelector('.switch');
 let backText = document.querySelectorAll('.back-text');
 let hireSubmit = document.querySelector('.hire-submit');
 let hireSelect = document.querySelectorAll('.hire-select');
-let hireForm = document.querySelector('.hire-form');
-// console.log(hireForm);
+let hireForm = document.querySelectorAll('.hire-form');
+
 
 // dark mode
 switchMode.addEventListener('click', () => {
@@ -21,25 +22,24 @@ switchMode.addEventListener('click', () => {
     faMoon.classList.toggle('fa-moon-new');
 
     hireSubmit.classList.toggle('hire-submit-change');
-    hireForm.classList.toggle('hire-form2');
+
+    for (let i = 0; i < hireForm.length; i++) {
+        hireForm[i].classList.toggle('hire-form2');
+    }
+})
+
+moon.addEventListener('click', () => {
+    console.log(darkLight);
+    darkLight.classList.toggle('fa-sun');
+    moon.classList.toggle('light');
 })
 
 
-// select
-for (let i = 0; i < hireSelect.length; i++) {
-    hireSelect[i].addEventListener('click', (e) => {
-        e.preventDefault();
-        let hire = e.currentTarget.innerHTML
-        console.log(hire);
-        
-        hireSelect[i].classList.toggle('hire-select-change');
-        if (hireSelect[i].classList.contains('hire-select-change')) {
-            hireSelect[i].innerHTML = hire + '<i class="fas fa-check"></i>';
-        }
-    } )
-}
-// submit
-hireSubmit.addEventListener('click', () => {
-    alert('Thank you for your interest in my services. I will get back to you soon.');
-}
-)
+// select one option
+hireSelect.forEach(function(item) {
+    item.addEventListener('click', function() {
+        let itemText = item.innerText;
+        hireSelect.forEach(btn => btn.classList.remove('hire-select-change'));
+        this.classList.add('hire-select-change');
+    })
+});

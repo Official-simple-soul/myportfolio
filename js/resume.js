@@ -1,20 +1,20 @@
 const educationText = [
     {
-        image: 'img/list-style.png',
+        image: '/img/list-style.png',
         title: 'Front-End Developement',
         text: 'Manage all team members from different to achieve the project goal of developing a blog website application for Kodehauz. Coordinate and assign tasks to the frontend team, review their submission and give feedback. As well as creating some UI/UX designs.',
         date: '2022 - 2022',
         institution: 'KodeCamp Bootcamp'
     },
     {
-        image: 'img/list-style.png',
+        image: '/img/list-style.png',
         title: 'Front-End Development',
         text: 'HTML, CSS, Bootstrap, Javascript and React',
         date: '2022 - 2022',
         institution: 'SimpliLearn Online Institute'
     },
     {
-        image: 'img/list-style.png',
+        image: '/img/list-style.png',
         title: 'Estate Management',
         text: 'Property Valuation, Property Management, Letting and Sales, Rating and Taxation',
         date: '2013 - 2019',
@@ -56,7 +56,8 @@ let subscribeText = document.querySelector('.subscribe-text');
 let mode = document.querySelectorAll('.mode');
 let switchMode = document.querySelector('.switch');
 let btnMode = document.querySelector('.btn-mode');
-let faMoon = document.querySelector('.fa-moon');
+let moon = document.querySelector('.moon');
+let darkLight = document.querySelector('.dark-light');
 
 
 
@@ -119,7 +120,12 @@ switchMode.addEventListener('click', () => {
             mode[i].classList.remove('bg-white');
         }
     }
-    faMoon.classList.toggle('fa-moon-new');
+})
+
+moon.addEventListener('click', () => {
+    console.log(darkLight);
+    darkLight.classList.toggle('fa-sun');
+    moon.classList.toggle('light');
 })
 
 // subscribe to newsletter

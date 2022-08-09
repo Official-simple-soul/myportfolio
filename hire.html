@@ -57,10 +57,12 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="card bg-transparent border-0 my-2">
-                        <a href="index.html" class="text-decoration-none text-dark back-text"><div class="d-flex justify-content-start align-items-center">
-                            <i class="fa-solid fa-arrow-left-long"></i>
-                            <p class="ms-2 mb-0">Back</p>
-                        </div></a>
+                        <a href="index.html" class="text-decoration-none text-dark">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <i class="fa-solid fa-arrow-left-long back-text"></i>
+                                <p class="ms-2 mb-0 back-text">Back</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -105,11 +107,11 @@
                         <div class="d-flex justify-content-between align-items-center column">
                             <div class="form-group">
                                 <label for="name" class="mb-2">Full Name</label>
-                                <input type="name" class="form-control hire-form bg-transparent" placeholder="">
+                                <input type="name" class="form-control hire-form bg-transparent" placeholder="" value="" required>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="mb-2">Email</label>
-                                <input type="email" class="form-control hire-form bg-transparent" placeholder="">
+                                <input type="email" class="form-control hire-form bg-transparent" placeholder="" required>
                             </div>
                         </div>
                         <div class="form-group d-flex justify-content-between align-items-center my-5 column">
@@ -118,10 +120,10 @@
                             <button class="btn btn-outline-secondary py-2 px-5 bg-transparent hire-select mb-2" style="font-size: 13px;">Collaboration</button>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control hire-form bg-transparent" rows="8" placeholder="Type Message"></textarea>
+                            <textarea class="form-control hire-form bg-transparent" rows="8" placeholder="Type Message" required></textarea>
                         </div>
                         <div class="form-group d-flex justify-content-center align-items-center mt-2">
-                                <button class="btn btn-dark py-1 px-5 hire-submit" style="font-size: 15px;">Submit</button>
+                                <button class="btn btn-dark py-1 px-5 hire-submit" style="font-size: 15px;" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -170,8 +172,8 @@
     <!-- end of footer section -->
 
     <!-- moon section -->
-    <div class="moon position-fixed bg-dark border rounded-circle p-2">
-        <i class="fa-solid fa-moon fs-1 switch"></i>
+    <div class="moon position-fixed border bg-dark rounded-circle p-2 switch shadow">
+        <i class="fa-solid fa-moon fs-1 dark-light"></i>
     </div>
     <!-- end of moon section -->
 

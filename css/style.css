@@ -69,7 +69,7 @@ input:checked {
     background-color: black !important;
 }
 
-#success-story {
+.success {
     background-image: url("../img/EMOJIS.png");
     background-size: cover;
     background-position: center;
@@ -174,6 +174,10 @@ footer {
     background-color: rgb(15, 15, 15) !important;
     color: white !important;
 }
+
+.swiper {
+    width: 600px;
+  }
 
 .work-hover{
     position: relative;
@@ -352,16 +356,22 @@ footer {
 .moon {
     right: 2%;
     bottom: 5%;
+    z-index: 5;
 }
 
 .fa-moon {
     -webkit-text-stroke: 1px #fff;
 }
 
-.fa-moon-new {
-    -webkit-text-stroke: 1px rgb(7, 7, 7);
-    color: #fff;
+.fa-sun {
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: white;
 }
+
+.light {
+    background-color: #fff !important;
+}
+
 
 @media (max-width: 800px) {
     .header-content {
@@ -420,5 +430,9 @@ footer {
         width: 90%;
         height: 20%;
     }
+
+    .swiper {
+        width: 100% !important;
+      }
 }
 

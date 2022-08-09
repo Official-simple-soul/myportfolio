@@ -43,7 +43,7 @@ const blogFeatured = [
 
 const blogPopular = [
     {
-        image: '../img/javascript.png',
+        image: '/img/javascript.png',
         name: 'Simple_soul',
         title: 'Javascript, Understanding javascript as a programming Language',
         read: 'JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users devices. <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">Read More</a>',
@@ -129,7 +129,8 @@ let subscribeBtn = document.querySelector('.get-content');
 let subscribeContent = document.querySelector('.modal-row-one');
 let closeBtn = document.querySelector('.close-btn');
 let subscribeText = document.querySelector('.subscribe-text');
-let faMoon = document.querySelector('.fa-moon');
+let moon = document.querySelector('.moon');
+let darkLight = document.querySelector('.dark-light');
 
 
 
@@ -319,9 +320,13 @@ switchMode.addEventListener('click', () => {
     for (let i = 0; i < mode.length; i++) {
         mode[i].classList.toggle('bg-dark');
         mode[i].classList.toggle('text-light');
-
     }
-    faMoon.classList.toggle('fa-moon-new');
+})
+
+moon.addEventListener('click', () => {
+    console.log(darkLight);
+    darkLight.classList.toggle('fa-sun');
+    moon.classList.toggle('light');
 })
 
 // subscribe

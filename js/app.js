@@ -36,54 +36,6 @@ const aboutText = [
     }
 ]
 
-const educationText = [
-    {
-        image: 'img/list-style.png',
-        title: 'Front-End Developement',
-        text: 'Manage all team members from different to achieve the project goal of developing a blog website application for Kodehauz. Coordinate and assign tasks to the frontend team, review their submission and give feedback. As well as creating some UI/UX designs.',
-        date: '2022 - 2022',
-        institution: 'KodeCamp Bootcamp'
-    },
-    {
-        image: 'img/list-style.png',
-        title: 'Front-End Development',
-        text: 'HTML, CSS, Bootstrap, Javascript and React',
-        date: '2022 - 2022',
-        institution: 'SimpliLearn Online Institute'
-    },
-    {
-        image: 'img/list-style.png',
-        title: 'Estate Management',
-        text: 'Property Valuation, Property Management, Letting and Sales, Rating and Taxation',
-        date: '2013 - 2019',
-        institution: 'Federal University of Technology, Minna'
-    }
-]
-
-const experienceText = [
-    {
-        image: '/img/list-style.png',
-        title: 'KodeCamp Blog website',
-        text: 'Manage all team members to achieve the project goal of developing a blog website application. Coordinate and assign tasks to the frontend team, review their submission and give feedback.',
-        date: '2022 - 2022',
-        institution: 'KodeCamp Bootcamp'
-    },
-    {
-        image: '/img/list-style.png',
-        title: 'Administrative Assitant/ IT Personnel,',
-        text: 'Administrative activities Staff management, social media management, data analysis, website management (WordPress)',
-        date: '2020 - Till Date',
-        institution: 'Land of Hope (ACAEDF)'
-    },
-    {
-        image: '/img/list-style.png',
-        title: 'Interim Surveyor',
-        text: 'Property Valuation, Property Management, Letting and Sales, Rating and Taxation',
-        date: '2019 - 2020',
-        institution: 'Jide Taiwo & Co.'
-    }
-]
-
 const worksDetails = [
     {
         image: 'img/kodeblog.png',
@@ -148,13 +100,11 @@ const successStory = [
 
 
 let rowWrap = document.querySelector('.row-wrap');
-let rowEdu = document.querySelector('.row-edu');
-let rowExp = document.querySelector('.row-exp');
 let numberOne = document.querySelector('.number-one');
 let numberTwo = document.querySelector('.number-two');
 let numberThree = document.querySelector('.number-three');
 let numberFour = document.querySelector('.number-four');
-let workRow = document.querySelector('.work-row');
+let workRow = document.querySelector('.swiper-wrapper');
 let successStoryRow = document.querySelector('.success-story-row');
 let changeText = document.querySelector('.change-text');
 let mode = document.querySelectorAll('.mode');
@@ -165,7 +115,9 @@ let subscribeBtn = document.querySelector('.get-content');
 let subscribeContent = document.querySelector('.modal-row-one');
 let closeBtn = document.querySelector('.close-btn');
 let subscribeText = document.querySelector('.subscribe-text');
-let faMoon = document.querySelector('.fa-moon');
+let moon = document.querySelector('.moon');
+let darkLight = document.querySelector('.dark-light');
+let backText = document.querySelectorAll('.back-text');
 
 let changeCount = 0;
 
@@ -185,58 +137,11 @@ for (let i = 0; i < aboutText.length; i++) {
     rowWrap.innerHTML += aboutItem;
 }
 
-// education Section
-for (let i = 0; i < educationText.length; i++) {
-    let educationItem = ''
-    educationItem += `  <li>
-                            <div class="row pe-5 my-2">
-                                <div class="col-md-3">
-                                    <div class="card border-0 bg-transparent">
-                                        <p class="text-muted mb-1">${educationText[i].date}</p>
-                                        <p class="fw-bold">${educationText[i].institution}</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="card border-0 bg-transparent">
-                                        <p class="fw-bold mb-1">${educationText[i].title}</p>
-                                        <p class="text-muted">${educationText[i].text}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>`
-    rowEdu.innerHTML += educationItem;
-}
-
-// experience Section
-function getExperience() {
-    let experience =  experienceText.map(item => {
-        return `
-                <li>
-                    <div class="row pe-5 my-2">
-                        <div class="col-md-3">
-                            <div class="card border-0 bg-transparent">
-                                <p class="text-muted mb-1">${item.date}</p>
-                                <p class="fw-bold">${item.institution}</p>
-                            </div>
-                        </div>
-                        <div class="col-md-9">
-                            <div class="card border-0 bg-transparent">
-                                <p class="fw-bold mb-1">${item.title}</p>
-                                <p class="text-muted">${item.text}</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>`
-    }).join('')
-    rowExp.innerHTML = experience;
-}
-getExperience();
-
 // works Section
 function getWork() {
     let works =  worksDetails.map(item => {
         return `
-                <div class="col-lg-4">
+                <div class="swiper-slide">
                         <div class=" card mb-4 bg-transparent border-0 work-hover" data-aos="zoom-in" data-aos-duration="1000">
                             <img src="${item.image}" alt="" class="img-fluid imagee">
                             <a href="${item.link}" target="_blank"><button class="btn btn-dark shadow btn-outline-light position-absolute me-3 mb-3 end-0 bottom-0 work-title">Go Live</button></a>
@@ -319,7 +224,15 @@ switchMode.addEventListener('click', () => {
             mode[i].classList.remove('bg-white');
         }
     }
-    faMoon.classList.toggle('fa-moon-new');
+    for (let i = 0; i < backText.length; i++) {
+        backText[i].classList.toggle('text-light');
+    }
+})
+
+moon.addEventListener('click', () => {
+    console.log(darkLight);
+    darkLight.classList.toggle('fa-sun');
+    moon.classList.toggle('light');
 })
 
 // subscribe to newsletter
@@ -347,6 +260,32 @@ subscribeBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     subscribeContent.classList.add('hidden');
 })
+
+// swiper
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    autoplay: {
+        delay: 5000,
+      },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
 
 
 
