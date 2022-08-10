@@ -42,7 +42,6 @@ moon.addEventListener('click', () => {
 // select one option
 hireSelect.forEach(function(item) {
     item.addEventListener('click', function() {
-        let itemText = item.innerText;
         hireSelect.forEach(btn => btn.classList.remove('hire-select-change'));
         this.classList.add('hire-select-change');
     })
