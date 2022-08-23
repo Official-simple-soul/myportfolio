@@ -50,6 +50,12 @@ const worksDetails = [
     },
 
     {
+        image: 'img/footballnow.png',
+        link: 'https://official-simple-soul.github.io/livescore/',
+        code: 'https://github.com/Official-simple-soul/livescore'
+    },
+
+    {
         image: 'img/daura.png',
         link: 'https://official-simple-soul.github.io/TeamZeusPage/',
         code: 'https://github.com/Official-simple-soul/TeamZeusPage'
